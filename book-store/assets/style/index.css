@@ -1,25 +1,30 @@
-*{
+* {
     margin: 0%;
 }
-.one{
+
+.one {
     background-color: #f4f3ec;
     padding: 80px;
 }
-.min{
+
+.min {
     background-color: #f4f3ec;
 }
-.spn{
+
+.spn {
     color: #c5a374;
 }
-.hov:hover{
+
+.hov:hover {
     color: red;
     transition: 2s;
 }
-.two span{
+
+.two span {
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 8px;
-    
 }
-.four{
-    color:white;
+
+.four {
+    color: white;
 }
