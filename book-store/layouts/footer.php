@@ -1,4 +1,4 @@
-<div class="bg-primary footer">
+<div class="bg-primary text-white footer">
     <div class="container-fluid mt-5 bg-primary four p-5 ">
         <div class="row">
             <div class="col-md-3 ">
@@ -25,7 +25,7 @@
             <div class="col-md-3">
                 <h4 class="text-light">News & Update</h4>
                 <p>We’d love it if you subscribed to our newsletter! You’ll love it too.</p>
-                <input type="email" placeholder="Email" class="bg-dark text-white">
+                <input type="email" placeholder="Email" class="bg-white border-0 text-white">
                 <p>Gift Collections</p>
                 <p>Purchase Cards</p>
 
