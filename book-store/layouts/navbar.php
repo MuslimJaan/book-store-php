@@ -24,10 +24,10 @@
             <a class="nav-link text-white fw-bold" href="#">SHOP</a>
           </li>
           <li class="nav-item text-white fw-bold">
-            <a class="nav-link text-white fw-bold" href="#">EVENT</a>
+            <a class="nav-link text-white fw-bold" href="about_us.php">ABOUT US</a>
           </li>
           <li class="nav-item text-white fw-bold">
-            <a class="nav-link text-white fw-bold" href="#">BLOG</a>
+            <a class="nav-link text-white fw-bold" href="contact_us.php">CONTACT US</a>
           </li>
           <li class="nav-item">
             <i class="fa fa-search mx-3 " aria-hidden="true"></i>
