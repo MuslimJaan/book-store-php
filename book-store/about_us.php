@@ -22,14 +22,8 @@
                 <img src="assets/images/single-image-01.png" alt="Image not found">
                 <h1 class="fw-bold">Welcom to Auteur</h1>
                 <span class="text-danger display-6 mt-5">A MONTHLY BOOKS REVIEW PUBLICATION</span>
-                <p class="mt-5">Imagine two men facing each other, pointing past one another. One is pointing at a
-                    tornado that is
-                    coming, and the other at a raging fire headed towards them. Each sees their own truth and is angry
-                    at
-                    the sight of the other’s hand. Each feels that the other’s hand is “wrong.” This may seem silly, but
-                    replace the tornado and fire with any modern issues, and the hands with words, and this scene
-                    describes
-                    how we often try to communicate.</p>
+                <p class="mt-5">Imagine two men facing each other, pointing past one another. One is pointing at atornado that is coming, and the other at a raging fire headed towards them. Each sees their own truth and is angryat the sight of the other’s hand. Each feels that the other’s hand is “wrong.” This may seem silly, but
+                    replace the tornado and fire with any modern issues, and the hands with words, and this scenedescribeshow we often try to communicate.</p>
             </div>
             <div class="d-flex mt-5">
                 <img src="assets/images/quote.jpg" alt="Image not found">
@@ -69,7 +63,6 @@
             </div>
         </div>
     </div>
-
     <div class="container mt-5 text-center bg-secondary">
 
         <h2 class="mb-5 text-danger">TESTIMONIALS</h2>
@@ -80,13 +73,11 @@
                 <img src="assets/images/testimonial-01-140x140.jpg" class="rounded-circle" alt="Image not found">
                 <p class="mt-4">" Auteur is a monthly book review </p>
                 <p> publication distributed to 400,000 avid </p>
-                <p> readers through
-                    subscribing
-                    bookstores & </p>
+                <p> readers through subscribingbookstores & </p>
                 <p> public libraries."</p>
             </div>
             <div class="col-lg-6 text-center mt-5 fw-bold" style="font-family: monospace;">
-                <img src="assets/images/testimonial-02-140x140.jpg" class="rounded-circle" alt="">
+                <img src="assets/images/testimonial-02-140x140.jpg" class="rounded-circle" alt="#">
                 <p class="mt-4">" It was a dark night, with only occasional</p>
                 <p> scattered lights, glittering like stars on the </p>
                 <p> plain. It
