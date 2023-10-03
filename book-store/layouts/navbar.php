@@ -14,11 +14,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link text-white fw-bold" href="#">PAGES</a>
-
           </li>
           <li class="nav-item">
             <img src="assets/images/logo_png.webp" alt="">
-
           </li>
           <li class="nav-item text-white fw-bold">
             <a class="nav-link text-white fw-bold" href="#">SHOP</a>
@@ -33,7 +31,6 @@
             <i class="fa fa-search mx-3 " aria-hidden="true"></i>
             <i class="fa fa-shopping-cart mx-3" aria-hidden="true"></i>
             <i class="fa fa-user-o mx-3" aria-hidden="true"></i>
-
           </li>
         </ul>
       </div>

@@ -28,20 +28,13 @@
                 <input type="email" placeholder="Email" class="bg-dark text-white">
                 <p>Gift Collections</p>
                 <p>Purchase Cards</p>
-
             </div>
             <div class="col-md-1">
                 <h4 class="text-light">BEST SELLERS</h4>
-
-
                 <img src="assets/images/product-6-600x829.jpg" alt="Image not found" width="105px">
-
             </div>
-
             <div class="col-md-2 ">
-
                 <p>Henry & The Good Dog </p>
-
                 <i class="fa fa-star text-danger mx-4" aria-hidden="true"></i>
                 <i class="fa fa-star text-danger" aria-hidden="true"></i>
                 <i class="fa fa-star text-danger" aria-hidden="true"></i>
