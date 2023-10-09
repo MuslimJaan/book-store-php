@@ -21,7 +21,15 @@
 </head>
 
 <body>
-    <?php include "navbar.php" ?>
 </body>
+<div class="wrapper">
+    <!-- sidebar -->
+    <?php include "sidebar.php" ?>
+    <!-- Page Content  -->
+    <div id="content">
+        <?php include "navbar.php" ?>
+    </div>
+</div>
+
 
 </html>
