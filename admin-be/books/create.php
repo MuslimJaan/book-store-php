@@ -19,7 +19,6 @@
                 <div class="col-lg-6">
                     <h1 class="mt-5">Book Information</h1>
                 </div>
-
             </div>
             <form>
                 <div class="row">
@@ -53,7 +52,6 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-
     </div>
 </div>
 </body>
