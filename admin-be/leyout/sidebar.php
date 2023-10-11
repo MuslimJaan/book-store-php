@@ -1,18 +1,15 @@
 <div class="wrapper">
     <!-- Sidebar  -->
-    <nav id="sidebar">
+    <nav id="sidebar" >
         <div class="sidebar-header">
-            <h3>Dashboard</h3>
+            <h3 class="text-dark">Dashboard</h3>
         </div>
-        <ul class="list-unstyled components">
+        <ul class="list-unstyled components bg-dark">
             <li>
-                <a href=""><i class="fa fa-tachometer mx-2"></i>Dashbord</a>
+                <a href=""><i class="fa fa-tachometer mx-2 text-dark"></i>Dashbord</a>
             </li>
-            <!-- <li class="active">
-                    <a href=""><i class="fa fa-home mx-2"></i>Home</a>
-                </li> -->
             <li>
-                <a href="#"><i class="fa fa-book mx-2"></i>Books</a>
+                <a href="../books/index.php"><i class="fa fa-book mx-2"></i>Books</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-list-alt mx-2"></i>Category</a>
@@ -27,10 +24,9 @@
                 <a href="#"><i class="fa fa-users mx-2"></i>Users</a>
             </li>
         </ul>
-
         <ul class="list-unstyled CTAs">
             <li>
-                <a class="download text-primary">Download source</a>
+                <a class="download text-light bg-dark">Download source</a>
             </li>
             <li>
                 <a class="article">Back to article</a>
