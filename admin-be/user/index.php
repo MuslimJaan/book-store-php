@@ -16,7 +16,7 @@
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2>Books</h2>
+                            <h2>User</h2>
                         </div>
                         <div class="col-sm-6">
                             <a href="create.php" class="btn btn-danger"><i class="fa fa-plus-circle" aria-hidden="true"></i> <span>Add New </span></a>
@@ -161,6 +161,7 @@
             </div>
         </div>
         <?php include "../leyout/footer.php" ?>
+
     </div>
 </div>
 </body>
