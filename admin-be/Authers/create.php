@@ -14,12 +14,11 @@
         <div class="container">
             <div class="row bg-info">
                 <div class="col-lg-6 mt-5">
-                   <a href="./index.php"> <i style="font-size: 40px;" class="fa fa-arrow-circle-left text-light" aria-hidden="true"></i></a>
+                    <a href="./index.php"> <i style="font-size: 40px;" class="fa fa-arrow-circle-left text-light" aria-hidden="true"></i></a>
                 </div>
                 <div class="col-lg-6">
                     <h1 class="mt-5">Book Information</h1>
                 </div>
-
             </div>
             <form>
                 <div class="row">
