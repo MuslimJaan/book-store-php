@@ -18,7 +18,7 @@
                 <a href="../Authers/index.php"><i class="fa fa-pencil mx-2"></i>Authers</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-shopping-cart mx-2"></i>Orders</a>
+                <a href="../order/index.php"><i class="fa fa-shopping-cart mx-2"></i>Orders</a>
             </li>
             <li>
                 <a href="../user/index.php"><i class="fa fa-users mx-2"></i>Users</a>

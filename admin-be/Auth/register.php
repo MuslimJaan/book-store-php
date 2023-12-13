@@ -1,49 +1,34 @@
-<?php include "../leyout/header.php" ?>
-<div class="wrapper">
-    <!-- sidebar -->
-    <?php include "../leyout/sidebar.php" ?>
-    <div id="content">
-        <?php include "../leyout/navbar.php" ?>
-        <!-- content -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb text-light p-3 bg-info">
-                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                <li class="breadcrumb-item active text-light" aria-current="page">Books </li>
-            </ol>
-        </nav>
-        <div class="container">
-            <div class="row bg-info">
-                <div class="col-lg-6 mt-5">
-                   <a href="./index.php"> <i style="font-size: 40px;" class="fa fa-arrow-circle-left text-light" aria-hidden="true"></i></a>
-                </div>
-                <div class="col-lg-6">
-                    <h1 class="mt-5">User Information</h1>
-                </div>
 
-            </div>
-            <?php include "../../book-store/config.php"?>;
+<?php include "../leyout/header.php" ?>
+<?php include "../../book-store/config.php"?>;
+
 <body class="bg-gray-100 flex items-center justify-center h-screen">
+
   <?php
+
   if (isset($_POST['submit'])) {
     $username = mysqli_real_escape_string($con,$_POST['name']);
     $emeel = mysqli_real_escape_string($con,$_POST['email']);
     $cpss = mysqli_real_escape_string($con,$_POST['password']);
     $pass = password_hash($cpss, PASSWORD_BCRYPT);
-    $sql = "SELECT * FROM users WHERE email='$emeel'";
+
+    $sql = "SELECT * FROM user WHERE email='$emeel'";
     $query = mysqli_query($con, $sql);
+
     $emailcount = mysqli_num_rows($query);
     if ($emailcount > 0) {
       echo "Email already exists";
     } else {
-      $insertquery = "insert into users(name,email,password)values('$username','$emeel','$pass')";
+      $insertquery = "insert into user(name,email,password)values('$username','$emeel','$pass')";
       $db = mysqli_query($con, $insertquery);
       if ($db) {
-        echo "Data is insert";
+        header('location:login.php');
       } else {
         echo "<script>alert('Not inserts')</script>";
       }
     }
   }
+  
   ?>
 
   <div class="container mt-5">
@@ -74,9 +59,8 @@
       </div>
     </div>
   </div>
-        <?php include "../leyout/footer.php" ?>
-    </div>
-</div>
+
+
 </body>
 
 </html>

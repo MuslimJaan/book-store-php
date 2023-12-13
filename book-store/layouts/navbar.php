@@ -31,8 +31,8 @@
           </li>
           <li class="nav-item">
             <i class="fa fa-search mx-3 " aria-hidden="true"></i>
-            <i class="fa fa-shopping-cart mx-3 " aria-hidden="true"></i>
-            <a href="shoping_card.php"><i class="fa fa-user-o mx-3 text-white" aria-hidden="true"></i></a>
+           <a class="text-white" href=" shoping_card.php"> <i class="fa fa-shopping-cart mx-3 " aria-hidden="true"></i></a>
+            <i class="fa fa-user-o mx-3 text-white" aria-hidden="true"></i>
 
           </li>
         </ul>

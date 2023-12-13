@@ -1,6 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+session_start();
+$cartItems = [];
 
+if (isset($_SESSION['cartItems'])) {
+    $cartItems = $_SESSION['cartItems'];
+}
+
+
+?>
 <?php include "layouts/header.php" ?>
 
 <body>
@@ -9,112 +16,42 @@
     <div class="container overflow-hidden">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
-                <h1 class="text-center mt-5 bg-primary text-light p-5">Shopping Cart</h1>
-                <table style="background-color:rgb(205, 203, 203);" class="table-  responsive-md w-100 ">
+                <h1 class="text-center mt-5 bg-primary text-light p-5 h1">Shopping Cart</h1>
+                <table style="background-color:rgb(205, 203, 203);" class="table text-center table-bordered">
                     <tr>
-                        <th class="border text-center bg-light  ">Id</th>
-                        <th class=" border  bg-light text-center">item</th>
-                        <th class="border bg-light text-center">category</th>
-                        <th class="border bg-light text-center">Quaintity</th>
-                        <th class="border bg-light text-center">Unit price</th>
-                        <th class="border bg-light text-center">Total price</th>
-                        <th class="border bg-light text-center">Actions</th>
-                        <th class="border bg-light text-center">Actions</th>
+                        <th>Id</th>
+                        <th colspan="2">Book</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total Price</th>
+                        <th>Action</th>
                     </tr>
                     <tbody id="datarow">
-                        <tr>
-                            <td class="border text-center p-2">1</td>
-                            <td class=" border text-center">Sam & Dave </td>
-                            <td class="border text-center">fiction</td>
-                            <td class="border text-center">1</td>
-                            <td class="border text-center">$14.00</td>
-                            <td class="border text-center">$14.00</td>
-                            <td class="border text-center"><button class=" bg-primary border-0 text-light rounded-3 w-50">Edit</button></td>
-                            <td class="border text-center"><button class=" bg-primary border-0 text-light rounded-3 ">Delete</button></td>
-                        </tr>
-                        <tr class=" bg-light">
-                            <td class="border text-center p-2">2</td>
-                            <td class=" border text-center">The Assault
-                            </td>
-                            <td class="border text-center">Biogarahfy</td>
-                            <td class="border text-center">2</td>
-                            <td class="border text-center">$19.00</td>
-                            <td class="border text-center">38.00</td>
-                            <td class="border  text-center"><button class=" bg-primary border-0 text-light rounded-3 w-50">Edit</button></td>
-                            <td class="border text-center"><button class=" bg-primary border-0 text-light rounded-3 ">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td class="border text-center p-2">3</td>
-                            <td class=" border text-center">
-                                The Carrot Hunt
-                            </td>
-                            <td class="border text-center">History</td>
-                            <td class="border text-center">3</td>
-                            <td class="border text-center">$19.00</td>
-                            <td class="border text-center">57.00</td>
-                            <td class="border text-center"><button class=" bg-primary border-0 text-light rounded-3 w-50">Edit</button></td>
-                            <td class="border text-center"><button class=" bg-primary border-0 text-light rounded-3 ">Delete</button></td>
-                        </tr>
-                        <tr class="bg-light">
-                            <td class="border text-center p-2">4</td>
-                            <td class=" border text-center">
-                                The DARK
-                            </td>
-                            <td class="border text-center">History</td>
-                            <td class="border text-center">4</td>
-                            <td class="border text-center">$20.00</td>
-                            <td class="border text-center">80.00</td>
-                            <td class="border  text-center"><button class=" bg-primary border-0 text-light rounded-3 w-50">Edit</button></td>
-                            <td class="border text-center"><button class=" bg-primary border-0 text-light rounded-3 ">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td class="border text-center p-2">5</td>
-                            <td class=" border text-center">
-                                The Journey
-                            </td>
-                            <td class="border text-center">Dream</td>
-                            <td class="border text-center">3</td>
-                            <td class="border text-center">$12.00</td>
-                            <td class="border text-center">36.00</td>
-                            <td class="border text-center"><button class=" bg-primary border-0 text-light rounded-3 w-50">Edit</button></td>
-                            <td class="border text-center"><button class=" bg-primary border-0 text-light rounded-3 ">Delete</button></td>
-                        </tr>
-                        <tr class="bg-light">
-                            <td class="border text-center p-2">6</td>
-                            <td class=" border text-center">
-                                The Night
-                            </td>
-                            <td class="border text-center">Horor</td>
-                            <td class="border text-center">2</td>
-                            <td class="border text-center">$22.00</td>
-                            <td class="border text-center">44.00</td>
-                            <td class="border text-center"><button class=" bg-primary border-0 text-light rounded-3 w-50">Edit</button></td>
-                            <td class="border  text-center"><button class=" bg-primary border-0 text-light rounded-3">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td class="border text-center p-2">7</td>
-                            <td class=" border text-center">
-                                The Summer of
-                            </td>
-                            <td class="border text-center">History</td>
-                            <td class="border text-center">2</td>
-                            <td class="border text-center">$24.00</td>
-                            <td class="border text-center">48.00</td>
-                            <td class="border  text-center"><button class="bg-primary border-0  text-light rounded-3 w-50">Edit</button></td>
-                            <td class="border text-center"><button class=" bg-primary border-0 text-light rounded-3 ">Delete</button></td>
-                        </tr>
-                        <tr class="bg-light">
-                            <td class="border text-center p-2">8</td>
-                            <td class=" border text-center">
-                                TRIO – Sarah
-                            </td>
-                            <td class="border text-center">History</td>
-                            <td class="border text-center">3</td>
-                            <td class="border text-center">$25.00</td>
-                            <td class="border text-center">75.00</td>
-                            <td class="border  text-center"><button class=" bg-primary border-0 text-light rounded-3 w-50">Edit</button></td>
-                            <td class="border text-center"><button class=" bg-primary border-0 rounded-3 text-light ">Delete</button></td>
-                        </tr>
+                    <?php
+                $totalQty=0;
+                $grandTotal = 0;
+        
+                foreach ($cartItems as $index => $item) {
+                    $total = $item['price'] * $item['quantity'];
+                    $totalQty +=$item['quantity'];
+                    $grandTotal +=$total;
+                ?>
+                    <tr>
+                        <td><?= $index + 1 ?></td>
+                        <td colspan="2"><img src="../admin-be/upload/<?= $item['image'] ?>" alt="" width="70px" height="70px"></td>
+                        <td><?= $item['name'] ?></td>
+                        <td><?= $item['quantity'] ?></td>
+                        <td><?= $item['price'] ?></td>
+                        <td><?= $total ?></td>
+                        <form action="add_to_cart.php" method="POST">
+                            <td><button name="remove" class="btn btn-danger">Remove</button></td>
+                            <td><input type="hidden" name="index" value="<?= $index ?>"></td>
+                        </form>
+                    </tr>
+                <?php
+                } ?>
+
                     </tbody>
                 </table>
             </div>
@@ -126,13 +63,17 @@
                 <h3 class="">Total Quantity</h3>
             </div>
             <div class="col-lg-3 fw-bold text-center">
-                <span id="totalQty">20</span>
+                <span id="totalQty"><?= $totalQty?></span>
             </div>
             <div class="col-lg-3 text-center fw-bold">
-                <span id="totalPrice">$392.00</span>
+                <span id="totalPrice">GrandTotal=</span>
+                <span id="totalPrice"><?= $grandTotal?></span>
             </div>
             <div class="col-lg-3 fw-bold text-center">
-                <button id="click" class="btn w-75 p-2 bg-primary border-0 text-light border-dark">Order Now</button>
+                <form action="order.php" method="post">
+                    <input type="hidden" name="total" value="<?= $grandTotal?>">
+                    <button type="submit" class="btn w-75 p-2 bg-primary border-0 text-light border-dark">Order Now</button>
+                </form>
             </div>
         </div>
     </div>

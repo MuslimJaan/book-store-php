@@ -1,6 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include "../book-store/config.php"; 
+session_start();
+?>
 
+
+<?php
+include "../book-store/config.php";
+?>
 <?php include "layouts/header.php" ?>
 
 <body>
@@ -8,142 +13,43 @@
     <hr class="mt-3">
     <div class="container mt-2 ">
         <div class="row">
-            <div class="col-md-3 text-center">
-                <a href="detail_page.php"> <img src="assets/images/product-1-800x1104.jpg" class="w-100 " alt="Image not found"></a>
-                <span class="spn fw-bold"> $38.00</span>
-                <h4 class="hov">JOHN STRASS</h4>
-                <p class="hov">Winter Darkest Tragedy</p>
-                <div class="row ">
-                    <div class="col-lg-3 ">
-                        <h6>Quantity</h6>
-                    </div>
-                    <div class="col-lg-9 ">
-                        <input class="w-100" type="number">
-                    </div>
-                </div>
-                <a href="Add-to-cart.html"> <button class="btn mt-4 m-3 bg-primary text link-light p-2 fw-bold w-50 ms-5">Add To
-                        Cart</button></a>
-            </div>
-            <div class="col-md-3 text-center ">
-                <a href="detail_page.php"> <img src="assets/images/product-2-600x829.jpg" alt="Image not found" class="w-100"></a>
-                <span class="spn fw-bold"> $22.00</span>
-                <h4 class="hov">JESSICA JOHNSON</h4>
-                <p class="hov">Symphony Of Trilogy</p>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h6>Quantity</h6>
-                    </div>
-                    <div class="col-lg-9 ">
-                        <input class="w-100" type="number">
-                    </div>
-                </div>
-                <a href="Add-to-cart.html"><button class="btn mt-4 m-3 bg-primary text link-light p-2 fw-bold w-50 ms-5">Add To
-                        Cart</button></a>
-            </div>
-            <div class="col-md-3 text-center ">
-                <a href="detail_page.php"> <img src="assets/images/product-3-600x829.jpg" alt="Image not found" class="w-100"></a>
-                <span class="spn fw-bold"> $67.00</span>
-                <h4 class="hov">JANE DOE</h4>
-                <p class="hov">Wellness And Paradise</p>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h6>Quantity</h6>
-                    </div>
-                    <div class="col-lg-9 ">
-                        <input class="w-100" type="number">
-                    </div>
-                </div>
-                <a href="Add-to-cart.html"><button class="btn mt-4 m-3  bg-primary text link-light p-2 fw-bold w-50 ms-5">Add To
-                        Cart</button></a>
-            </div>
-            <div class="col-md-3 text-center ">
-                <a href="detail_page.php"> <img src="assets/images/product-8-600x829.jpg" alt="Image not found" class="w-100"></a>
-                <span class="spn fw-bold"> $29.00</span>
-                <h4 class="hov">ADAM STRASS</h4>
-                <p class="hov">Fantasy Storytelling</p>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h6>Quantity</h6>
-                    </div>
-                    <div class="col-lg-9 ">
-                        <input class="w-100" type="number">
-                    </div>
-                </div>
-                <a href="Add-to-cart.html"><button class="btn mt-4 m-3 bg-primary text link-light p-2 fw-bold w-50 ms-5">Add To
-                        Cart</button></a>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    <div class="container mt-5 ">
-        <div class="row" id="tableData">
-            <div class="col-md-3 text-center  ">
-                <a href="detail_page.php"><img src="assets/images/product-9-600x829.jpg" alt="Image not found" class="w-100"></a>
-                <span class="spn fw-bold">$78.00</span>
-                <h4 class="hov">JOHN STRASS</h4>
-                <p class="hov">Easy Fast Cooking </p>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h6>Quantity</h6>
-                    </div>
-                    <div class="col-lg-9 ">
-                        <input class="w-100" type="number">
-                    </div>
-                </div>
-                <a href="Add-to-cart.html"> <button class="btn mt-4 bg-primary m-3 text link-light p-2 fw-bold w-50 ms-5">Add To Cart</button></a>
-            </div>
-            <div class="col-md-3 text-center ">
-                <a href="detail_page.php"> <img src="assets/images/product-4-600x829.jpg" alt="Image not found" class="w-100"></a>
-                <span class="spn fw-bold"> $68.00</span>
-                <h4 class="hov">JAMES HOFFMAN</h4>
-                <p class="hov">Amster Hamster Trip</p>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h6>Quantity</h6>
-                    </div>
-                    <div class="col-lg-9 ">
-                        <input class="w-100" type="number">
-                    </div>
-                </div>
-                <a href="Add-to-cart.html"><button class="btn mt-4 bg-primary m-3 text link-light p-2 fw-bold w-50 ms-5">Add To Cart</button></a>
-            </div>
-            <div class="col-md-3 text-center ">
-                <a href="detail_page.php"><img src="assets/images/product-6-600x829.jpg" alt="Image not found" class="w-100"></a>
-                <span class="spn fw-bold"> $33.00</span>
-                <h4 class="hov">JANE DOE </h4>
-                <p class="hov">Summertime Love Stories</p>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h6>Quantity</h6>
-                    </div>
-                    <div class="col-lg-9 ">
-                        <input class="w-100" type="number">
-                    </div>
-                </div>
-                <a href="Add-to-cart.html"><button class="btn mt-4 bg-primary m-3 text link-light p-2 fw-bold w-50 ms-5">Add To Cart</button></a>
-            </div>
-            <div class="col-md-3 text-center ">
-                <a href="detail_page.php"><img src="assets/images/product-10-600x829.jpg" alt="Image not found" class="w-100"></a>
-                <del>$24.00</del> <span class="spn fw-bold"> $56.00</span>
-                <h4 class="hov">JOHN STRASS</h4>
-                <p class="hov">Japan Travel Stories</p>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h6>Quantity</h6>
-                    </div>
-                    <div class="col-lg-9 ">
-                        <input class="w-100" type="number">
-                    </div>
-                </div>
-                <a href="Add-to-cart.html"><button class="btn mt-4 bg-primary m-3 text link-light p-2 fw-bold w-50 ms-5">Add To Cart</button></a>
-            </div>
 
+            <?php
+            $sql = "SELECT * FROM books";
+            $res = mysqli_query($con, $sql);
+            if ($res) {
+                while ($row = mysqli_fetch_assoc($res)) {
+            ?>
+
+                    <div class="col-md-3 text-center ">
+                        <a href="detail_page.php"> <img src="../admin-be/upload/<?= $row['image'] ?>" alt="Image not found" class="w-100"></a>
+                        <span class="spn fw-bold"><?= $row['price'] ?>  </span>
+                        <h1 class="h5"><?= $row['name'] ?></h1>
+                        <p class="my-2"><?= $row['description'] ?></p>
+                        <form action="add_to_cart.php" method="post">
+                <div class="d-flex gap-2 m-3 justify-content-center">
+                  <h5 class="opacity-75">QTY</h5>
+                  <input type="number" name="quantity" min="1" value="1" class="form-control w-25">
+                </div>
+                <div class="text-center">
+                  <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                  <input type="hidden" name="name" value="<?= $row['name'] ?>">
+                  <input type="hidden" name="image" value="<?= $row['image'] ?>">
+                  <input type="hidden" name="price" value="<?= $row['price'] ?>">
+                  <button type="submit" name="addCart" class="btn btn-outline-secondary btn-md">ADD TO CART</button>
+                </div>
+                </div>
+
+              </form>
+            <?php
+                }
+            }
+            ?>
+            
         </div>
-    </div>
+    </dsiv>
     </div>
     </div>
     <?php include "layouts/footer.php" ?>
 </body>
-
 </html>

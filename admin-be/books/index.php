@@ -1,3 +1,11 @@
+<?php
+include "../../book-store/config.php";
+$qry = "SELECT books.*,authors.name AS a_name,categories.name AS c_name FROM books
+                        JOIN authors ON books.author_id = authors.id
+                        JOIN categories ON books.category_id = categories.id";
+$res = mysqli_query($con, $qry);
+?>
+
 <?php include "../leyout/header.php" ?>
 <div class="wrapper">
     <!-- sidebar -->
@@ -29,30 +37,35 @@
                             <th>ID</th>
                             <th>Images</th>
                             <th>Name</th>
-                            <th>Author</th>
                             <th>Description</th>
-                            <th>Quantity</th>
-                            <th>Amount</th>
+                            <th>Author</th>
+                            <th>price</th>
                             <th>Category</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>img</td>
-                            <td>javascript</td>
-                            <td>jhon</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>33</td>
-                            <td>$55</td>
-                            <td>History</td>
-                            <td class="col-md-2">
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa fa-pencil" aria-hidden="true" data-toggle="tooltip" title="Edit"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true" data-toggle="tooltip" title="Delete"></i></a>
-                                <a href="view.php" class=""><i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip" title="view"></i></a>
-                            </td>
-                        </tr>
+                        <?php if ($res) {
+                            while ($row = mysqli_fetch_assoc($res)) {
+                        ?>
+                                <tr>
+                                    <td><?= $row['id'] ?></td>
+                                    <td><img src="../upload/<?= $row['image'] ?>" width="80px" height="100px" alt=""></td>
+                                    <td><?= $row['name'] ?></td>
+                                    <td><?= $row['description'] ?></td>
+                                    <td><?= $row['a_name'] ?></td>
+                                    <td>$<?= $row['price'] ?></td>
+                                    <td><?= $row['c_name'] ?></td>
+                                    <td class="col-md-2">
+                                        <a href="../books/edit.php?id=<?= $row['id'] ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a href="../books/delete.php?id=<?= $row['id'] ?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                        <a href="../books/view.php?id=<?= $row['id'] ?>" class=""><i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip" title="view"></i></a>
+                                    </td>
+                                </tr>
+                        <?php
+                            }
+                        }
+                        ?>
                     </tbody>
                 </table>
                 <div class="clearfix">
@@ -69,97 +82,7 @@
                 </div>
             </div>
         </div>
-        <!-- Edit Modal HTML -->
-        <div id="addEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Add Model</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Models</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Status</label>
-                                <input type="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Schedule</label>
-                                <textarea class="form-control" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Amount</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-success" value="Add">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- Edit Modal HTML -->
-        <div id="editEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Edit Employee</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Models</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Status</label>
-                                <input type="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Schedule</label>
-                                <textarea class="form-control" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Amount</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-info" value="Save">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- Delete Modal HTML -->
-        <div id="deleteEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Delete Model</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Are you sure you want to delete these Records?</p>
-                            <p class="text-warning"><small>This action cannot be undone.</small></p>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-danger" value="Delete">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+
         <?php include "../leyout/footer.php" ?>
     </div>
 </div>

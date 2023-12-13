@@ -1,3 +1,19 @@
+<?php  include "../../book-store/config.php";
+
+if ($rid = $_REQUEST['id']) {
+$res =mysqli_query ($con,"SELECT * FROM user WHERE id =$rid");
+    if (mysqli_num_rows($res) ==1) {
+        $row = mysqli_fetch_assoc($res);
+        $user_id =$row['id'];
+        $user_name =$row['name'];
+        $user_email= $row['email'];
+    }else{
+echo "Viewer not Found";
+    }
+}else{
+    echo "Invallid Request";
+}
+?>
 <?php include "../leyout/header.php" ?>
 <div class="wrapper">
     <!-- sidebar -->
@@ -29,7 +45,7 @@
                             <h6>#</h6>
                         </div>
                         <div class="col-10">
-                            <h6>1</h6>
+                            <h6><?php echo  $user_id?></h6>
                         </div>
                     </div>
                 </li>
@@ -39,70 +55,21 @@
                             <h6>Name</h6>
                         </div>
                         <div class="col-10">
-                            <h6>Muslim</h6>
+                            <h6><?php echo $user_name?></h6>
                         </div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="row">
                         <div class="col-2">
-                            <h6>Image</h6>
+                            <h6>Email</h6>
                         </div>
                         <div class="col-10">
-                            <h6>1</h6>
+                            <h6><?php echo $user_email?></h6>
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-2">
-                            <h6>Description</h6>
-                        </div>
-                        <div class="col-10">
-                            <h6 class="w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis explicabo id voluptatum veniam illo voluptate vel voluptates maxime.</h6>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-2">
-                            <h6>Author</h6>
-                        </div>
-                        <div class="col-10">
-                            <h6>Faraz</h6>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-2">
-                            <h6>Category</h6>
-                        </div>
-                        <div class="col-10">
-                            <h6>History</h6>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-2">
-                            <h6>Created_at</h6>
-                        </div>
-                        <div class="col-10">
-                            <h6>1</h6>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-2">
-                            <h6>Updated_at</h6>
-                        </div>
-                        <div class="col-10">
-                            <h6>1</h6>
-                        </div>
-                    </div>
-                </li>
+                
             </ul>
         </div>
         <?php include "../leyout/footer.php" ?>

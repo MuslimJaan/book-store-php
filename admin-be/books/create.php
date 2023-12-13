@@ -4,55 +4,82 @@
     <?php include "../leyout/sidebar.php" ?>
     <div id="content">
         <?php include "../leyout/navbar.php" ?>
-        <!-- content -->
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb text-light p-3 bg-info">
+            <ol class="breadcrumb bg-dark text-light">
                 <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                <li class="breadcrumb-item active text-light" aria-current="page">Books </li>
+                <li class="breadcrumb-item active text-light" aria-current="page">book </li>
             </ol>
         </nav>
-        <div class="container">
-            <div class="row bg-info">
-                <div class="col-lg-6 mt-5">
-                    <a href="./index.php"> <i style="font-size: 40px;" class="fa fa-arrow-circle-left text-light" aria-hidden="true"></i></a>
+        <form action="upload.php" method="POST" class="custom-form" enctype="multipart/form-data">
+            <div class="row text-light bg-dark border  rounded mb-2 p-2">
+                <div class="col-sm-5">
+                    <a href="index.php">
+                        <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                    </a>
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="mt-5">Book Information</h1>
+                <div class="col-sm-7">
+                    <h2>Create</h2>
                 </div>
-
             </div>
-            <form>
-                <div class="row">
-                    <div class="form-group col-lg-6">
-                        <label for="title">Id</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="author">Name</label>
-                        <input type="text" class="form-control">
-                    </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name">
                 </div>
-                <div class="row">
-                    <div class="form-group col-lg-6">
-                        <label for="title">Auther</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="author">Category</label>
-                        <input type="text" class="form-control">
-                    </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="name">Author:</label>
+                    <select name="author" class="form-control">
+                        <?php
+                        include "../../book-store/config.php";
+                        $autqry = "SELECT*FROM authors";
+                        $query = mysqli_query($con, $autqry);
+                        while ($row = mysqli_fetch_assoc($query)) {
+                        ?>
+                            <option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
+
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="category">Category:</label>
+                    <select name="category" class="form-control">
+                        <?php
+                        $category = "SELECT*FROM categories";
+                        $catoqry = mysqli_query($con, $category);
+                        while ($roww = mysqli_fetch_assoc($catoqry)) {
+                        ?>
+                            <option value="<?php echo $roww['id'] ?>"><?php echo $roww['name'] ?></option>
+                        <?php
+                        }
+
+                        ?>
+
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="image" name="image">
+                    <label class="custom-file-label" for="image">Choose file</label>
                 </div>
                 <div class="form-group">
-                    <label for="genre">Image</label>
-                    <input type="text" class="form-control">
+                <div class="form-group col-md-12">
+                    <label for="name">price:</label>
+                    <input type="text" class="form-control" id="price" name="price">
                 </div>
-                <div class="form-group col-lg-6">
-                    <label for="author">Message</label>
-                    <input type="message" class="form-control p-5">
+                    
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea class="form-control" id="description" name="description" rows="4"></textarea>
+                </div>
+                <button type="submit" name="submit" class="btn btn-primary ">Submit</button>
+        </form>
         <?php include "../leyout/footer.php" ?>
     </div>
 </div>

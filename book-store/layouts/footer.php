@@ -50,7 +50,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-primary text-light mt-5 p-5">
+    <div class="container-fluid bg-primary text-light mt-5 p-">
         <div class="row ">
             <div class="col-md-9">
                 <img src="assets/images/payment_01.jpg" alt="Image not found">
