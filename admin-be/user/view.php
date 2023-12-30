@@ -1,7 +1,7 @@
 <?php  include "../../book-store/config.php";
 
 if ($rid = $_REQUEST['id']) {
-$res =mysqli_query ($con,"SELECT * FROM user WHERE id =$rid");
+$res =mysqli_query ($con,"SELECT * FROM users WHERE id =$rid");
     if (mysqli_num_rows($res) ==1) {
         $row = mysqli_fetch_assoc($res);
         $user_id =$row['id'];

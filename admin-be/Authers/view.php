@@ -1,6 +1,6 @@
 <?php include "../../book-store/config.php";
 if ($aid = $_REQUEST['id']) {
-    $res = mysqli_query($con, "SELECT * FROM authers WHERE id =$aid");
+    $res = mysqli_query($con, "SELECT * FROM authors WHERE id =$aid");
     if (mysqli_num_rows($res) == 1) {
         $row = mysqli_fetch_assoc($res);
         $auth_id = $row['id'];

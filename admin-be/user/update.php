@@ -5,7 +5,7 @@ $sid = $_POST['stid'];
 $name = $_POST['fname'];
 $email = $_POST['email'];
 
-$qry = "UPDATE user SET `name` ='$name', email='$email' WHERE id = '$sid'";
+$qry = "UPDATE users SET `name` ='$name', email='$email' WHERE id = '$sid'";
 
 $res = mysqli_query($con, $qry);
 

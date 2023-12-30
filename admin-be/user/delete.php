@@ -2,7 +2,7 @@
  include "../leyout/header.php"; 
  include "../../book-store/config.php";
  $rid =$_REQUEST['id'];
-$qry= "DELETE FROM user WHERE id ='$rid'";
+$qry= "DELETE FROM users WHERE id ='$rid'";
 $res=mysqli_query($con,$qry);
 var_dump($res);
 if($res=== true)

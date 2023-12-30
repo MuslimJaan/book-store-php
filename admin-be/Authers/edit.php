@@ -2,7 +2,7 @@
 <?php include "../../book-store/config.php";
 
 $aid = $_REQUEST['id'];
-$qry = "SELECT *FROM authers WHERE id='$aid'";
+$qry = "SELECT *FROM authors WHERE id='$aid'";
 $res= mysqli_query($con,$qry);
 if (!$res) {
     die("Error: " . mysqli_error($con));

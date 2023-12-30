@@ -1,7 +1,7 @@
 <?php include "../leyout/header.php"; ?>
 <?php include "../../book-store/config.php";
 $rid = $_REQUEST['id'];
-$qry =  "SELECT * FROM user WHERE id ='$rid'";
+$qry =  "SELECT * FROM users WHERE id ='$rid'";
 $res = mysqli_query($con, $qry);
 if (!$res) {
     die("Error: " . mysqli_error($con));

@@ -3,7 +3,7 @@ include "../../book-store/config.php";
 $aid = $_POST['cid'];
 $name = $_POST['cname'];
 
-$qry = "UPDATE authers SET name='$name' WHERE id='$aid'";
+$qry = "UPDATE authors SET name='$name' WHERE id='$aid'";
 $res = mysqli_query($con, $qry);
 if ($res === true) {
     // echo "Your Data is Updated";
